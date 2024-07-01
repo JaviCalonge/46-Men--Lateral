@@ -1,13 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  --bg-color: color-mix(in srgb, #f62 70%, #fff);
+  --bg-color: color-mix(in srgb, rgb(156, 196, 255) 70%, #fff);
   --sidebar-color: #fff;
-  --dark-color: #f62;
   background-color: var(--bg-color);
 }
 
+
 /* --------SIDEBAR-------- */
+
 
 aside {
   margin: 0;
@@ -25,7 +26,6 @@ aside {
   justify-content: space-between;
 }
 
-
 .sidebar__picture {
   display: flex;
   justify-content: center;
@@ -38,9 +38,6 @@ aside {
 
 .sidebar__nav ul {
   padding: 14px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 
 .sidebar__nav li, .sidebar__profile li {
@@ -109,14 +106,16 @@ input[type="checkbox"] {
 }
 
 
-/*------------------MAIN---------------*/
+/* --------SIDEBAR END-------- */
+
+
+/*---------------MAIN------------*/
 
 main {
   display: flex;
   margin: auto;
   max-width: clamp(320px, 60%, 800px);
 }
-
 
 .text__title {
   margin: 0;
@@ -132,29 +131,16 @@ main {
   font-size: 20px;
 }
 
+
+/*---------------MAIN END------------*/
+
+
+/*---------------MEDIA QUERIES------------*/
+
+
 @media (max-width: 518px) {
   main {
     margin-right: 1px;
     text-align: left;
   }
 }
-
-
-/* 
-@media (max-width: 918px) {
-  .text{
-    display: flex;
-    flex-direction: column;
-    color: red;
-    width: 450px;
-    margin: auto;
-  }
-}
-
-@media (max-width: 650px) {
-  .text{
-    color: green;
-    width: 400px;
-    margin: 0px 200px 0px 100px;
-  }
-} */
