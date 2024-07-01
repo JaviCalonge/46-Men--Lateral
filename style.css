@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  --bg-color: color-mix(in srgb, #f62 70%, #fff);
+  --sidebar-color: #fff;
+  --dark-color: #f62;
+  background-color: var(--bg-color);
+}
+
+/* --------SIDEBAR-------- */
+
+aside {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: var(--sidebar-color);
+  position: fixed;
+  height: 100%;
+  width: clamp(200px, 20vw, 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.sidebar__picture {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;  
+}
+
+.sidebar__nav {
+   flex: 1;
+}
+
+.sidebar__nav ul {
+  padding: 14px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.sidebar__nav li, .sidebar__profile li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  color: inherit;
+  margin-top: 24px;
+  font-size: .9rem;
+}
+
+.sidebar__nav li:hover, .sidebar__profile li:hover {
+  opacity: .5;
+}
+
+.sidebar__nav a, .sidebar__profile a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar__form {
+  position: absolute;
+  right: 1px;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) picture {
+ display: none; 
+}
+
+.sidebar:has(input[type="checkbox"]:checked) a {
+  display: none;
+ }
+
+ .sidebar:has(input[type="checkbox"]:checked) .close {
+  display: none;
+ }
+
+ .sidebar:has(input[type="checkbox"]:not(:checked)) .person {
+  display: none;
+ }
+
+ .sidebar:has(input[type="checkbox"]:not(:checked)) .menu {
+  display: none;
+ }
+
+ .sidebar:has(input[type="checkbox"]:checked) {
+  width: fit-content;
+ }
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.sidebar__profile ul {
+  padding: 14px;
+}
+
+.img-profile {
+  border-radius: 50%;
+}
+
+.img:hover {
+  opacity: .7;
+}
+
+
+/*------------------MAIN---------------*/
+
+main {
+  display: flex;
+  margin: auto;
+  max-width: clamp(320px, 60%, 800px);
+}
+
+
+.text__title {
+  margin: 0;
+  padding-top: 50px;
+  font-size: 44px;
+}
+
+.text__subtitle {
+  font-size: 34px;
+}
+
+.text {
+  font-size: 20px;
+}
+
+@media (max-width: 518px) {
+  main {
+    margin-right: 1px;
+    text-align: left;
+  }
+}
+
+
+/* 
+@media (max-width: 918px) {
+  .text{
+    display: flex;
+    flex-direction: column;
+    color: red;
+    width: 450px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .text{
+    color: green;
+    width: 400px;
+    margin: 0px 200px 0px 100px;
+  }
+} */
