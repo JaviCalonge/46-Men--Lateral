@@ -65,29 +65,29 @@ aside {
   right: 1px;
 }
 
-.sidebar:has(input[type="checkbox"]:checked) picture {
- display: none; 
+.sidebar:has(input[type="checkbox"]:not(:checked)) picture {
+display: none; 
 }
-
-.sidebar:has(input[type="checkbox"]:checked) a {
+ 
+.sidebar:has(input[type="checkbox"]:not(:checked)) a {
   display: none;
- }
-
- .sidebar:has(input[type="checkbox"]:checked) .close {
+}
+ 
+.sidebar:has(input[type="checkbox"]:not(:checked)) .close {
   display: none;
- }
-
- .sidebar:has(input[type="checkbox"]:not(:checked)) .person {
+}
+ 
+.sidebar:has(input[type="checkbox"]:checked) .person {
   display: none;
- }
-
- .sidebar:has(input[type="checkbox"]:not(:checked)) .menu {
+}
+ 
+  .sidebar:has(input[type="checkbox"]:checked) .menu {
   display: none;
- }
-
- .sidebar:has(input[type="checkbox"]:checked) {
+}
+ 
+.sidebar:has(input[type="checkbox"]:not(:checked)) {
   width: fit-content;
- }
+}
 
 input[type="checkbox"] {
   display: none;
